@@ -1,0 +1,128 @@
+/* Set Sitewide Margins Here */
+*
+{
+	margin: 0; /*Exterior (of Background Image) border*/
+	margin-top: 0vh;
+	margin-left: 0px;
+	padding: 0; /*Interior Padding of Assets (within exterior border)*/
+}
+
+.background /*Background Image/Color*/
+{
+background-color: #17211d;
+background-attachment: fixed;
+border: 1vw solid lightgray;
+border-top: 0px;
+background-clip: padding-box;
+z-index: -2;
+}
+
+/*.rectangle {*/
+/*			position: fixed;*/
+/*			width: 35vw;*/
+/*			height: 30vh;*/
+/*			z-index: 0;*/
+/*			margin-top: 35vh;*/
+/*			margin-left: 5vw;*/
+/*			*/
+/*			border-radius: 3px;*/
+/*			background: white;*/
+/*			opacity: 0.9;*/
+/*			}*/
+
+ul {
+	position: fixed;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25vw;
+	height: 30vh;
+	z-index: 0;
+	margin-top: 35vh;
+	margin-left: 10vw;
+	background-color: #17211d;
+	
+/*	padding: 0.5vw;*/
+/*	border-style: double;*/
+/*	border-color: white;*/
+/*	border-radius: 10px;*/
+}
+
+li a {
+	display: block;
+	font-family: 'Permanent Marker';
+	font-size: 2.5vh;
+	color: lightgray;
+	padding: 1vh;
+	text-decoration: none;
+	text-align: center;
+	transition: 0.25s;
+}
+
+li a.active {
+/*	background-color: lightgray;*/
+/*	color: #17211d;*/
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+li a:hover {
+/*	background-color: #556168;*/
+/*	color: white;*/
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: white;
+	mix-blend-mode: color-dodge;
+}
+
+.signature {
+	display: block;
+	position: relative;
+	object-fit: scale-down;
+	width: auto;
+	height: 12.5vh;
+	z-index: 0;
+	margin: auto;
+	margin-bottom: 10px;}
+
+.gallery {
+	position: relative;
+	z-index: 0;
+    width: 65vw;
+    min-height: 10vh;
+	max-height: 70vh;
+	object-fit: scale-down;
+	margin-bottom: 7.5vh;
+
+	display: block;
+	margin-left: 30vw;
+	margin-right: 10vw;
+	
+	transition: .4s;
+  }
+
+	.gallery:nth-child(1) {
+		padding-top: 15vh;
+		transform: rotate(-0.5deg); }
+	.gallery:nth-child(2) {
+		transform: rotate(0.5deg);  }
+	.gallery:nth-child(3) {
+		transform: rotate(0deg); }
+	.gallery:nth-child(4) {
+		transform: rotate(-0.5deg); }
+	.gallery:nth-child(5) {
+		transform: rotate(0.5deg);  }
+	.gallery:nth-child(6) {
+		transform: rotate(-0.5deg); }
+	.gallery:nth-child(7) {
+		transform: rotate(0.5deg);  }
+	.gallery:nth-child(8) {
+		transform: rotate(-0.5deg); }
+	.gallery:nth-child(10) {
+		transform: rotate(0.5deg);  }
+
+
+  .gallery:hover {
+	z-index: 1;
+    transform: scale(1.1) rotate(0deg);
+  }
