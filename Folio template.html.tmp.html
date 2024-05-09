@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peter Lawrence | Portfolio</title>
+        
+        <style>
+            @font-face {
+                font-family: 'Mermaid';
+                /* Adjust the URL based on the actual path to your font file within your GitHub repository */
+                src: url('https://github.com/peterlawrence1997/portfolio/blob/b39b7adff6ca4131a7e51bcde9e61da22dd819a6/Mermaid1001.ttf') format('truetype');
+            }
+            h1 {
+                font-family: 'Mermaid', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1.5pt;
+            }
+            h2 {
+                font-family: 'Mermaid', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1pt;
+            }
+            h3 {
+                font-family: 'Mermaid', sans-serif;
+                text-transform: capitalize;
+                letter-spacing: 1pt;
+            }
+            strong {
+                background-color: black;
+                color: white;
+                font-style: italic;
+            }
+            .stat-container {
+                display: flex; /* Align children inline */
+                justify-content: center; /* Center children horizontally */
+                align-items: baseline; /* Align children along their text baseline */
+                text-align: center; /* Ensure text is centered if it wraps */
+                gap: 10px; /* Optional: adds some space between the statistic and its label */
+            }
+            
+            .largestat {
+                font-family: 'Mermaid', sans-serif;
+                font-size: calc(3 * 1em); /* Adjust based on your h1 size */
+                color: #333;
+                margin: 0; /* Adjust or remove margin as needed */
+                flex: 0 0 auto; /* Do not grow or shrink */
+            }
+            
+            .statlabel {
+                font-family: 'Mermaid', sans-serif;
+                font-size: calc(1 * 1em); /* Adjust as needed */
+                color: #666;
+                margin: 0; /* Adjust or remove margin as needed */
+                flex: 0 0 auto; /* Do not grow or shrink */
+                
+            }
+            
+            .img-icon {
+                height: 2em;
+                margin-right: 15px;
+            }
+            
+            
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                line-height: 1.6;
+                color: #444;
+                background-color: rgb(255, 255, 253);
+                font-family: sans-serif;
+            }
+            main {
+                max-width: 650px;
+                margin: auto;
+                padding: 20px;
+                position: relative; /* To control the position of the scroll-container */
+            }
+            /* Horizontally scrollable container for images */
+            /* Horizontally scrollable container */
+            .scroll-container {
+                padding-left: inherit;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* For Firefox */
+                -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+                height: 400px;
+            }
+            .scroll-container::-webkit-scrollbar {
+                display: none; /* For Chrome, Safari, and Opera */
+            }
+            
+            .scroll-container img {
+                max-height: 90%; /* Make the image's height equal to the container's height */
+                margin: 10px;
+                /* Remove display: inline-block if it causes issues */
+                /* Optionally, you can set width: auto; to ensure width adjusts based on height */
+            }
+            @keyframes svgBlink {
+                0%, 100% { opacity: 0.25; }
+                50% { opacity: 1.0; }
+            }
+            
+            .blink-svg {
+                animation: svgBlink 6s ease infinite;
+                transform: scale(.8) translateX(10px);
+            }
+        </style>
+        
+    </head>
+    <body>
+        <main>
+            <!-- Section Begins Below-->
+            <div id="Example Section ID">
+                <!-- horizontal Divider line -->
+                <hr style="height: 1px; background-color: #808080; border: none;">        
+                <!-- Title Container Aligning Logo to Left of Header-->
+                <div style="display: flex; align-items: center;">
+                    <img src="file:///Users/peterlawrence/Documents/GitHub/portfolio%202024/gallery/photos/other/logos/rosso.png" alt="Brandname Logo" class="img-icon">
+                    <h2>Project Title</h2>
+                </div>        
+                <!-- Tag Cluster for Skills Involved, or alternately company names -->
+                <h3>Tag 1, Tag 2, Tag 3, Tag 4</h3>
+                
+                <!-- Horizontal Scrolling Image Gallery -->
+                <div class="scroll-container">
+                    <!-- Scroll for more prompt -->
+                    <img class="blink-svg" src="assets/scroll left.svg" alt="Scroll left">
+                    <!-- Images Begin Below-->
+                    <img src="gallery/portfolio/_MG_6119 (2).jpeg" alt="">
+                    <img src="gallery/portfolio/30% off .jpg" alt="Northern Lights">
+                    <img src="gallery/photos/faxmag/reaper.jpg" alt="Mountains">
+                    <!-- Video Embed -->
+                    <video autoplay loop muted playsinline style="max-height: 100%; width: auto;">
+                        <source src="gallery/portfolio/Abstract X Colour Block.mp4" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Gallery Caption Text -->
+                <div style="max-width: 650px;padding-top:0;margin: auto;">Swipe Picture Gallery Caption here.</div>
+                
+                <!-- Begin Section Body Text -->
+                <p>Project Overview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <!-- List Items -->
+                <ul>
+                    <li>Key Skill or Task 1</li>
+                    <li> Task 2</li>
+                    <li> Task 3 etc etc</li>
+                </ul>
+                <p>Significant Result or Outcome</p>
+                
+                <!-- Stats Box -->
+                <div class="stat-container">
+                    <div class="largestat">Stat#1%</div>
+                    <div class="statlabel">label</div>
+                    <div class="largestat">|</div>
+                    <div class="largestat">Stat#2</div>
+                    <div class="statlabel">Label</div>
+                </div>
+            </div> 
+            
+            <!-- End Demo Section -->
+</main>
+</html>
+    

@@ -1,0 +1,53 @@
+import ffmpeg
+import sys
+
+def convert_video_to_avif(input_file_path):
+    try:
+        # Probe the video file to get stream information
+        probe = ffmpeg.probe(input_file_path)
+        video_stream = next((stream for stream in probe['streams'] if stream['codec_type'] == 'video'), None)
+        
+        if video_stream is None:
+            print("Error: Input file is not a video")
+            return
+        
+        # Extract frame rate and aspect ratio
+        frame_rate = eval(video_stream['avg_frame_rate'])
+        width = int(video_stream['width'])
+        height = int(video_stream['height'])
+        aspect_ratio = width / height
+
+        # Calculate new dimensions
+        if width > height:
+            new_width = 600
+            new_height = int(new_width / aspect_ratio)
+        else:
+            new_height = 600
+            new_width = int(new_height * aspect_ratio)
+        
+        output_file_path = input_file_path.rsplit('.', 1)[0] + '.avif'
+
+        # Command to convert video
+        (
+            ffmpeg
+            .input(input_file_path)
+            .filter('scale', new_width, new_height)
+            .output(output_file_path, vcodec='libaom-av1', pix_fmt='yuv420p10le', r=frame_rate, crf=30, strict='-2', movflags='faststart')
+            .run(overwrite_output=True)
+        )
+        
+        print(f"Conversion successful, output saved to {output_file_path}")
+
+    except ffmpeg.Error as e:
+        print("An error occurred:", e.stderr.decode())
+
+def main():
+    if len(sys.argv) > 1:
+        input_file_path = sys.argv[1]
+        print("Received the following file path:", input_file_path)
+        convert_video_to_avif(input_file_path)
+    else:
+        print("No files were dropped onto the app.")
+
+if __name__ == "__main__":
+    main()
