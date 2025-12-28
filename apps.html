@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Lawrence | Apps</title> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+        @font-face {
+            font-family: 'Mermaid';
+            src: url('/Mermaid1001.ttf') format('truetype');
+        }
+        h1 {
+            font-family: 'Mermaid', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5pt;
+            line-height: 1.0em;
+        }
+        h2 {
+            font-family: 'Mermaid', sans-serif;
+            text-transform: auto;
+            letter-spacing: 1pt;
+        }
+        h3 {
+            font-family: 'Mermaid', sans-serif;
+            text-transform: capitalize;
+            letter-spacing: 1pt;
+        }
+        strong {
+            background-color: black;
+            color: white;
+            font-style: italic;
+        }
+        .stat-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            font-family: 'DM Serif Text', serif;
+        }
+        .stat-block {
+            flex: 1 1 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .largestat {
+            font-family: 'DM Serif Text', serif;
+            font-size: 3em; 
+            color: #333;
+            line-height: 1;
+            margin: 0;
+        }
+        .statlabel {
+            font-family: 'DM Serif Text', serif;
+            font-size: 1em;
+            color: #666;
+            margin: 0;
+        }
+        .img-icon {
+            height: 2em;
+            margin-right: 15px;
+            border-radius: 5%;
+            vertical-align: middle;
+        }
+        .overlapping-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+        }
+        .icon-overlap {
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 50%;
+            background-color: white;
+            border: 0px white;
+            margin-right: -15px;
+            transition: transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-overlap img {
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            object-fit: contain;
+            position: static;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+            background-color: rgb(255, 255, 253);
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        main {
+            width: 100%;
+            padding-top: 1px;
+            padding-bottom: 20px;
+        }
+
+        .text-content {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header-intro {
+            max-width: 650px;
+            margin: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            height: 400px;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-container img {
+            max-height: 90%;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes svgBlink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.66; transform: translateX(10px); }
+        }
+        .blink-svg {
+            animation: svgBlink 4s ease infinite;
+        }
+
+        hr.section-divider {
+            max-width: 650px;
+            margin: 50px auto;
+            height: 1px;
+            background-color: #808080;
+            border: none;
+        }
+
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSMXYD2QX4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SSMXYD2QX4');
+    </script>
+</head>
+<body>
+
+    <div class="header-intro">
+        <div style="display: flex; align-items: center;">
+            <img src="gallery/photos/headshot.webp" alt="Peter Lawrence" class="img-icon" style="margin-right: 10px; margin-bottom: auto; height: 2.2em;">
+            <h1 style="margin: 0; font-size: 2.5em; margin-bottom: 10px;">Peter Lawrence</h1>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 10px; width: 100%;">
+            <div style="display: flex; align-items: center;">
+                <h2 style="margin-top: 0; margin-bottom: 0; margin-right: 15px;">Apps</h2>
+                <a href="index.html" style="font-size: 0.8em; text-decoration: none; color: #888; font-weight: bold; margin-right: 15px; font-family: 'Mermaid', sans-serif; text-transform: uppercase; letter-spacing: 1pt;">Portfolio</a>
+                <a href="https://www.linkedin.com/in/peter-lawrence-au/" target="_blank" style="display: flex; align-items: center; font-size: 0.8em; text-decoration: none; color: black; margin-right: 10px;">
+                    <img src="gallery/photos/other/logos/linkedin.png" alt="LinkedIn" style="width: 20px; margin-right: 10px;">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div style="max-width: 650px; margin: auto; padding-top: 0;">
+            <p style="margin: 0; text-align: left; font-size: 1em;">Branding, design, and photography, supported by the technical skill and development know-how to bring it all together across any system.</p>
+        </div>
+    </div>
+
+    <main>
+        <article id="Glyphy">
+            <hr class="section-divider">
+            
+            <div class="text-content">
+                <div style="display: flex; align-items: center;">
+                    <img src="gallery/apps/Glyphy_AppIcon.png" alt="Glyphy Icon" class="img-icon" style="height: 3em; border-radius: 20%;">
+                    <h2>Glyphy</h2>
+                </div>
+                <h3>The Essential SF Symbol Picker for macOS</h3>
+                
+                <p>
+                    Glyphy is a lightweight, native macOS utility designed to streamline your design and development workflow. It provides instant access to the entire SF Symbols library, allowing you to search, preview, and insert icons directly into your projects with a single keystroke. Whether you need a raw string, an SVG, or a PNG, Glyphy handles the heavy lifting so you can stay in your creative flow without ever leaving your IDE or design tool.
+                </p>
+                
+            </div>
+            
+            <div class="scroll-container">
+                <img src="gallery/swipe_left/scroll left2.svg" alt="Scroll left" class="blink-svg" style="height: 100px; margin-top: 100px; margin-bottom: 120px; margin-left: max(calc((100vw - 650px) / 2 + 10px), 20px);">
+                <img src="gallery/apps/glyphy_screenshot_1.jpg" alt="Glyphy Screenshot 1">
+                <img src="gallery/apps/glyphy_screenshot_2.jpg" alt="Glyphy Screenshot 2">
+            </div>
+            
+            <div class="text-content">
+                <ul>
+                    <li><strong>Global Hotkey Access:</strong> Summon the picker instantly from any application with a custom shortcut.</li>
+                    <li><strong>Versatile Export Formats:</strong> Effortlessly copy symbols as Text, SVG, or high-quality PNG.</li>
+                    <li><strong>Smart Search & Categories:</strong> Find the perfect icon in seconds with intuitive filtering and symbol categorization.</li>
+                    <li><strong>Native & Lightweight:</strong> Built with Swift for peak performance and a seamless, aesthetic macOS experience.</li>
+                </ul>
+            </div>
+        </article>
+
+        <hr class="section-divider">
+
+    </main>
+
+</body>
+</html>
